@@ -180,6 +180,10 @@ class DeyeHADiscovery(DeyeEventProcessor):
         elif topic.endswith("temperature") or topic == "radiator_temp":
             device_class = "temperature"
 
+        # topci: settings/active_power_regulation
+        elif topic.endswith("settings/active_power_regulation")
+            device_class = "power_factor"
+
         return device_class
 
     @staticmethod
